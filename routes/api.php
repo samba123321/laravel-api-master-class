@@ -15,8 +15,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/', function(){
+  return response()->json([
+      'message' => 'Hello World'
+  ], 200);
+});
+
 Route::get('/login', [AuthController::class, 'login']);
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+
+//Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
+//    return $request->user();
+//});
