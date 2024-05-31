@@ -3,6 +3,7 @@
 namespace Tests\Feature\Controller;
 
 use Tests\TestCase;
+use App\Traits\ApiResponses;
 
 class AuthControllerTest extends TestCase
 {
@@ -13,6 +14,7 @@ class AuthControllerTest extends TestCase
      */
     public function testLogin()
     {
+
         $response = $this->get('/api/login');
 
         $response->assertStatus(200);
