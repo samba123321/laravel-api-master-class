@@ -81,4 +81,9 @@ class AuthController extends Controller
     {
         return $this->success('User registered successfully', 201);
     }
+
+    public function badRequest(): JsonResponse
+    {
+        return $this->error('Bad request', 400);
+    }
 }
